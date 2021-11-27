@@ -9,7 +9,8 @@ export const GlobalStyle = createGlobalStyle`
         --seaFoam: #aed6dc;
         --salamon:#ff9a8d;
         --navy:#4a536b;
-        /* sea colors */
+        --white:#FFFFFF;
+        /* something else */
         --green:#1fbfb8;
         --darkGreen:#05716c;
         --medueimBlue:#1978a5;
