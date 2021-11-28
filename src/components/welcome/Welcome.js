@@ -1,5 +1,5 @@
 import React from 'react';
-import { Content, Waves, Wrapper } from './Welcome.styles';
+import { Content, Waves, Wrapper, Title} from './Welcome.styles';
 import waves from '../../svg/wavesOpacity.svg'
 import { motion } from 'framer-motion';
 
@@ -8,12 +8,13 @@ const Welcome = () => {
         visible : {
             opacity: 1,
             transition : {
-                delay: 0.2,
-                staggerChildren: 0.1,
+                duration: 1,
+                staggerChildren: 0.07,
+                when: 'beforeChildren'
             }
         },
         hidden: {
-            opacity: 1
+            opacity: 0
         }
     }
 
@@ -28,8 +29,8 @@ const Welcome = () => {
         }
     }
 
-    const line1= 'Hi, My name is Reda';
-    const line2 = "I'm a front-end web developer"
+    const line1 = "I'm a front-end web developer,"
+    const line2 = "and my main focus is React ❤"
 
     return ( 
         <Wrapper>
@@ -37,11 +38,13 @@ const Welcome = () => {
                 <motion.h1 variants={sentence} 
                             initial='hidden'
                             animate='visible'>
+                    Hi, My name is Reda
+                    <br/>
                     {line1.split('').map((letter, index) => (
-                        <motion.span key={letter + '_' + index} variants={letters}>{letter}</motion.span>
+                        <Title key={letter + '_' + index} variants={letters}>{letter}</Title>
                     ))}<br/>
                     {line2.split('').map((letter, index) => (
-                        <motion.span key={letter + '_' + index} variants={letters}>{letter}</motion.span>
+                        <Title key={letter + '_' + index} variants={letters} subtitle>{letter}</Title>
                     ))}
                 </motion.h1>
             </Content>

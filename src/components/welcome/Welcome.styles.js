@@ -19,6 +19,18 @@ export const Content = styled(motion.div)`
     width: 50%;
     margin: 0 auto;
     text-align: center;
+    line-height: 1;
+    h1 {
+        font-weight: 600;
+        font-size: 3rem
+    }
+`;
+
+export const Title = styled(motion.span)`
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-style: italic;
+        color: var(--navy);
 `;
 
 export const Waves = styled.img`
@@ -26,7 +38,8 @@ export const Waves = styled.img`
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 100px;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);    
-`
+`;
