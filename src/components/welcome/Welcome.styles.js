@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { motion } from "framer-motion";
+
 
 export const Wrapper = styled.section`
     width: 100%;
@@ -15,7 +15,7 @@ export const Wrapper = styled.section`
     font-family: 'Source Code Pro', monospace;
 `;
 
-export const Content = styled(motion.div)`
+export const Content = styled.div`
     width: 50%;
     margin: 0 auto;
     text-align: center;
@@ -26,7 +26,7 @@ export const Content = styled(motion.div)`
     }
 `;
 
-export const Title = styled(motion.span)`
+export const Title = styled.span`
         font-size: 1.5rem;
         font-weight: 500;
         font-style: italic;
