@@ -18,6 +18,8 @@ export const Wrapper = styled.section`
 
 export const Content = styled.div`
     width: 50%;
+    display:flex;
+    flex-direction: column;
     margin: 0 auto;
     text-align: center;
     line-height: 1;

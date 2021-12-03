@@ -2,6 +2,8 @@ import React from 'react';
 import { Content, Waves, Wrapper, Title} from './Welcome.styles';
 import waves from '../../svg/wavesOpacity.svg'
 import {useSpring, animated, useTrail} from 'react-spring'
+import Button from '../button/Button';
+
 
 const Welcome = () => {
 
@@ -51,6 +53,7 @@ const Welcome = () => {
                     </Title>
                 ))}
                 </p>
+                <Button text='SEE MY WORK' arrow={true}/>
             </Content>
             <Waves src={waves}/>
         </Wrapper>
