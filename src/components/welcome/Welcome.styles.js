@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { animated } from "@react-spring/web";
 
 
 export const Wrapper = styled.section`
@@ -24,11 +25,15 @@ export const Content = styled.div`
         font-weight: 600;
         font-size: 3rem
     }
+    p {
+        margin-top: 1rem;
+    }
 `;
 
-export const Title = styled.span`
+export const Title = styled(animated.span)`
         font-size: 1.5rem;
         font-weight: 500;
+        line-height: 1.3;
         font-style: italic;
         color: var(--navy);
 `;

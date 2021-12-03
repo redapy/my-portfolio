@@ -35,7 +35,6 @@ export const GlobalStyle = createGlobalStyle`
     
     body {
         width: 100%;
-        line-height: calc(1em + 0.5rem);
         -webkit-font-smoothing: antialiased;
     }
 

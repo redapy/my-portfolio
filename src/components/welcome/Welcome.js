@@ -1,26 +1,56 @@
 import React from 'react';
 import { Content, Waves, Wrapper, Title} from './Welcome.styles';
 import waves from '../../svg/wavesOpacity.svg'
+import {useSpring, animated, useTrail} from 'react-spring'
 
 const Welcome = () => {
-    
 
-    const line1 = "I'm a front-end web developer,"
-    const line2 = "and my main focus is React ❤"
+    const config = { mass: 5, tension: 3000, friction: 300 };
+    const letters = ("I'm a front-end web developer, and my main focus is React ❤").split('');
+    const fadeIn = useSpring({
+        from: {
+            opacity: 0,
+            x: 50,
+        },
+        to: {
+            opacity:1,
+            x: 0,
+            
+        },
+        config: {duration: 700}
+    })
+
+    const typeWritter = useTrail(letters.length, {
+        from: {
+            opacity: 0,
+            y:50
+        },
+        to: {
+            opacity: 1,
+            y:0
+        },
+        config
+    })
 
     return ( 
         <Wrapper>
             <Content>
-                <h1>
+                <animated.h1 style={fadeIn}>
                     Hi, My name is Reda
-                    <br/>
-                    {line1.split('').map((letter, index) => (
-                        <Title key={letter + '_' + index} >{letter}</Title>
-                    ))}<br/>
-                    {line2.split('').map((letter, index) => (
-                        <Title key={letter + '_' + index}  subtitle>{letter}</Title>
-                    ))}
-                </h1>
+                </animated.h1>
+                <p>
+                {typeWritter.map(({y, ...props}, i) => (
+                    <Title 
+                        key={i}
+                        style={{
+                            ...props,
+                            transform: y.to(y => `translate3d(0, ${y}, 0)`),
+                        }}
+                    >
+                    {letters[i]}
+                    </Title>
+                ))}
+                </p>
             </Content>
             <Waves src={waves}/>
         </Wrapper>
