@@ -19,7 +19,7 @@ const Welcome = () => {
             x: 0,
             
         },
-        config: {duration: 700}
+        config
     })
 
     const typeWritter = useTrail(letters.length, {
