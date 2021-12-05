@@ -4,15 +4,11 @@ import { animated } from "@react-spring/web";
 
 export const Wrapper = styled.section`
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     background: var(--seaFoam);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
     font-family: 'Source Code Pro', monospace;
 `;
 
