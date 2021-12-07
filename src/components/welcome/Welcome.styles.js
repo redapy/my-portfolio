@@ -10,6 +10,10 @@ export const Wrapper = styled.section`
     justify-content: center;
     background: var(--seaFoam);
     font-family: 'Source Code Pro', monospace;
+
+    @media screen and (max-width: 720px) {
+        min-height: 100vh;
+    }
 `;
 
 export const Content = styled.div`
