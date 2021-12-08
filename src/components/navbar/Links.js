@@ -1,33 +1,16 @@
 import React, {useState} from 'react';
 //styles
 import { List } from './Navbar.styles';
-//animation
-import {useTrail, animated} from 'react-spring'
-import { Title } from '../welcome/Welcome.styles';
 
-const Links = ({isOpened}) => {
+const Links = () => {
 
     const [active, setActive ] = useState(false);
-    const links = [
-        {
-            section: '#about',
-            title: 'About'
-        },
-        {
-            section: '#projects',
-            title: 'Projects'
-        },
-        {
-            section: '#contact',
-            title: 'Contact'
-        }
-    ]
 
     const changeBackground = () => {
         window.scrollY > 80 ?  setActive(true) : setActive(false)
-    }
+    };
 
-    window.addEventListener('scroll', changeBackground)
+    window.addEventListener('scroll', changeBackground);
 
     return (
     <List active={active}>

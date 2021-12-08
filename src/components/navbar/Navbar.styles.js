@@ -59,12 +59,14 @@ export const List = styled.ul`
         align-items: center;
         text-align: center;
         width: 100%;
-        background-color: var(--navy);
+        
 
         li {
-            padding-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            width: 100%;
+            background-color: var(--navy);
             :first-child {
-                padding-top: 2rem;
+                padding-top: 1.5rem;
             }
         }
         a {

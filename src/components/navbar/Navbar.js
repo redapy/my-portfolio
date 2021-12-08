@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Links from './Links';
 import { Icon, Wrapper } from './Navbar.styles';
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
+import AnimatedLinks from './AnimatedLinks';
 
 
 const Navbarbar = () => {
@@ -13,11 +14,11 @@ const Navbarbar = () => {
         <Wrapper >
             <Links />
         </Wrapper>
-        <Icon onClick={() => setIsOpened(!isOpened)} isOpened={isOpened}>
+        <Icon onClick={() => setIsOpened(isopened => !isopened)} isOpened={isOpened}>
             {!isOpened && <AiOutlineMenu />}
             {isOpened && <AiOutlineClose />}
         </Icon>
-        {isOpened && <Links isOpened={isOpened}/>}
+        {isOpened && <AnimatedLinks isOpened={isOpened}/>}
         </>
      );
 }
