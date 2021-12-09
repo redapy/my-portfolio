@@ -4,6 +4,7 @@ import { animated } from "@react-spring/web";
 
 export const Wrapper = styled.section`
     width: 100%;
+    position: relative;
     min-height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;

@@ -17,6 +17,7 @@ export const Icon = styled.button`
     @media screen and (max-width: 720px) {
         display: block;
         position: absolute;
+        z-index: 100;
         right: 0;
         margin: 1rem;
         font-size: 2em;
