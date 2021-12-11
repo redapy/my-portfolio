@@ -7,7 +7,7 @@ const useOnScreen = (options) => {
 
     const fadeIn = entries => {
         const [entry] = entries
-        if ( entry.isIntersecting) setIsvisible(entry.isIntersecting)
+        setIsvisible(entry.isIntersecting)
     }
 
     useEffect(() => {
