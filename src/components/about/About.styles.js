@@ -9,4 +9,23 @@ export const Wrapper = styled.section`
 
 export const Info = styled.div`
     width: 40%;
+    margin-top: 100px;
 `;
+
+export const Skills = styled.div`
+    width: 40%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: left;
+`;
+
+export const SkillsList = styled.ul`
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    align-items: left;
+`

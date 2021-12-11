@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Wrapper = styled.nav`
     width: 100%;
     height: 80px;
@@ -40,7 +39,6 @@ export const List = styled.ul`
     li {
         list-style: none;
         padding: 0 1.5rem;
-
     }
     a {
         text-decoration: none;
@@ -52,7 +50,10 @@ export const List = styled.ul`
             opacity: 0.7;
         }
     }
+`;
 
+export const AnimatedList = styled.ul`
+    display: none;
     @media screen and (max-width: 720px) {
         display: flex;
         flex-direction: column;
@@ -66,12 +67,20 @@ export const List = styled.ul`
             padding-bottom: 1.5rem;
             width: 100%;
             background-color: var(--navy);
+            list-style: none;
             :first-child {
                 padding-top: 1.5rem;
             }
         }
         a {
             color: var(--salamon);
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            text-decoration:none;
+            :hover {
+            opacity: 0.7;
+            }
         }
     }
 `;

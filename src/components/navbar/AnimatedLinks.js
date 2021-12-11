@@ -1,10 +1,10 @@
 import React from 'react';
 import { useState } from 'react/cjs/react.development';
 import {useTransition, animated, config} from 'react-spring'
-import { List } from './Navbar.styles';
+import { AnimatedList } from './Navbar.styles';
 
 
-const AnimatedLinks = () => {
+const AnimatedLinks = ({isOpened}) => {
 
     const [links] = useState([{section: '#about', title: 'About', delay: 100}, {section: '#projects', title: 'Projects', delay: 150}, {section: '#contact', title: 'Contact', delay:200}])
     const listTransition = useTransition(links, {
@@ -13,13 +13,13 @@ const AnimatedLinks = () => {
         config: config.slow
     })
     return ( 
-        <List>
-            {listTransition((style, item) => (
+        <AnimatedList>
+            { isOpened && listTransition((style, item) => (
                 <animated.li style={style}>
                     <a href={item.section}>{item.title}</a>
                 </animated.li>
             ))}
-        </List>
+        </AnimatedList>
      );
 }
  
