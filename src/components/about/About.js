@@ -1,7 +1,8 @@
 import React, { useMemo } from 'react';
 import useOnScreen from '../../hooks/useOnScreen';
+import profile from '../../img/profile.jpg'
 
-import { Info, Wrapper } from './About.styles';
+import { Info, PicWrapper, Wrapper } from './About.styles';
 
 const About = () => {
     // Set intersection observer for the wrapper
@@ -18,12 +19,18 @@ const About = () => {
     return ( 
         <Wrapper ref={wrapperRef} id='about'>
             {isvisible && 
-            <Info >
-                <h2>Who am I ?</h2>
-                <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque perferendis eveniet, sapiente repudiandae, architecto delectus molestias neque distinctio, veniam qui dolor est ipsam excepturi reiciendis repellat eos quos nesciunt?
-                </p>
-            </Info>}
+                <Info >
+                    <h2>Who am I ?</h2>
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque perferendis eveniet, sapiente repudiandae, architecto delectus molestias neque distinctio, veniam qui dolor est ipsam excepturi reiciendis repellat eos quos nesciunt?
+                    </p>
+                </Info>
+            }
+            {isvisible &&
+                <PicWrapper>
+                    <img src={profile} alt="my-profile" />
+                </PicWrapper>
+            }
         </Wrapper>
      );
 }

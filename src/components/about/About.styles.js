@@ -12,3 +12,15 @@ export const Info = styled.div`
     width: 40%;
 `;
 
+export const PicWrapper = styled.div`
+    width: 400px;
+    height: 400px;
+    background: white;
+    img {
+        width: 100%;
+        max-wdith: 100%;
+        border: 10px solid var(--navy);
+        border-radius: 5%;
+        object-fit: contain;
+    }
+`;
