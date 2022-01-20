@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { animated } from "react-spring";
 
 export const Wrapper = styled.section`
     display: flex;
@@ -8,14 +9,17 @@ export const Wrapper = styled.section`
     min-height: 100vh;
 `;
 
-export const Info = styled.div`
+export const Info = styled(animated.div)`
     width: 40%;
+    h2 {
+        margin-bottom: 4px;
+        color: var(--navy)
+    }
 `;
 
-export const PicWrapper = styled.div`
-    width: 400px;
-    height: 400px;
-    background: white;
+export const PicWrapper = styled(animated.div)`
+    width: 500px;
+    min-height: 500px;
     img {
         width: 100%;
         max-wdith: 100%;

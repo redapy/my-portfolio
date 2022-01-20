@@ -6,16 +6,17 @@ const useOnScreen = (options) => {
     const [isvisible, setIsvisible] = useState(false)
 
     const fadeIn = entries => {
-        const [entry] = entries
-        setIsvisible(entry.isIntersecting)
+        const [entry] = entries;
+        setIsvisible(entry.isIntersecting);
     }
 
     useEffect(() => {
-        const observer = new IntersectionObserver(fadeIn,options)
-        if (wrapperRef.current) observer.observe(wrapperRef.current)
-
+        const observer = new IntersectionObserver(fadeIn, options)
+        const current = wrapperRef.current
+        if (current) observer.observe(current)
+        
         return () => {
-            if (wrapperRef.current) observer.unobserve(wrapperRef.current)
+            if (current) observer.unobserve(current)
         }
     }, [options, wrapperRef])
 

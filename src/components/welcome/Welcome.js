@@ -1,25 +1,24 @@
 import React from 'react';
 import { Content, Waves, Wrapper, Title} from './Welcome.styles';
 import waves from '../../svg/wavesOpacity.svg'
-import {useSpring, animated, useTrail} from 'react-spring'
+import {useSpring, animated, useTrail, config} from 'react-spring'
 import Button from '../button/Button';
 
 
 const Welcome = () => {
-
-    const config = { mass: 5, tension: 3000, friction: 300 };
+    const myConfig = { mass: 5, tension: 3000, friction: 300 };
     const letters = ("I'm a front-end web developer, and my main focus is React ❤").split('');
     const fadeIn = useSpring({
         from: {
             opacity: 0,
-            x: 50,
+            y: -100,
         },
         to: {
             opacity:1,
-            x: 0,
+            y: 0,
             
         },
-        config
+        config: config.molasses
     })
 
     const typeWritter = useTrail(letters.length, {
@@ -31,7 +30,7 @@ const Welcome = () => {
             opacity: 1,
             y:0
         },
-        config
+        config: myConfig
     })
 
     return ( 
