@@ -1,15 +1,13 @@
 import { Hover, Project, ProjectImg, Wrapper, List, Title } from "./Card.styles";
-import calculator from '../../img/projects-images/calculator.PNG'
 import { useSpring, useTrail, config, animated, useSpringRef, useChain } from "react-spring";
 import { useState } from "react";
 
 
-const Card = ({title, stacks, imgSrc}) => {
+const Card = ({title, link, stacks, imgSrc}) => {
     const [hovered, setHovered] = useState(false);
-    const skills = ['HTML', 'CSS', 'JavaScript', 'ReactJS', 'git', 'GitHub'];
     const hoverRef = useSpringRef();
     const [{y}, api] = useSpring(() => ({ y: 100, ref: hoverRef }));
-    const [skillsTrail, trailApi] = useTrail(skills.length, () => ({
+    const [skillsTrail, trailApi] = useTrail(stacks.length, () => ({
         x: 50,
         opacity: 0,
         config: config.stiff
@@ -42,30 +40,28 @@ const Card = ({title, stacks, imgSrc}) => {
                     }}
             >
                 <ProjectImg>
-                    <img src={calculator} alt="calculator-project" />
+                    <img src={imgSrc} alt="calculator-project" />
                 </ProjectImg>
                 <Hover style={{ transform: y.to(y => `translateY(${y}%`) }}>
                     <List>
                         {skillsTrail.map(({x, ...props}, i) => (
                             <animated.li 
-                                key={skills[i]}
+                                key={stacks[i]}
                                 style={{
                                     ...props,
                                     transform: x.to(x => `translate3d(${x}px, 0, 0)`)
                                 }}
-                            >{skills[i]}</animated.li>
+                            >{stacks[i]}</animated.li>
                         ))}
                     </List>
                     <Title style={{
                         ...buttonSpring,
                         transform: y.to(y => `translateY(${y}%`)                        
                         }}>
-                    <button >
-                        Go live!
+                    <button>
+                        <a href={link}>Go live!</a>
                     </button>
-                    <h4>
-                        CALCULATOR
-                    </h4>
+                    <h4>{title.toUpperCase()}</h4>
                     </Title>
 
                 </Hover>
