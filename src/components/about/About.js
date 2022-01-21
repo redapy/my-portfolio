@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import useOnScreen from '../../hooks/useOnScreen';
 import profile from '../../img/profile.jpg'
 import { Info, PicWrapper, Wrapper } from './About.styles';
-import {useSpring, animated, config} from 'react-spring'
+import {useSpring, animated} from 'react-spring'
 
 
 const About = () => {
