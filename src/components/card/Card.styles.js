@@ -1,7 +1,7 @@
 import { animated } from "react-spring";
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(animated.div)`
     width: 100%;
     margin-bottom: 10PX
 `;
@@ -9,8 +9,8 @@ export const Wrapper = styled.div`
 export const Project = styled.div`
   position: relative;
   margin: 0 auto;
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   overflow: hidden;
   border-radius: 40px;
   box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
@@ -67,6 +67,10 @@ export const Title = styled(animated.div)`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  a {
+    text-decoration: none;
+    color: var(--seaFoam);
+  }
 
   button {
     width: 100px;
@@ -78,7 +82,8 @@ export const Title = styled(animated.div)`
     cursor: pointer;
   }
   h4 {
-    color: var(--seaFoam);
+    color: var(--salamon);
     font-family: 'Nunito', sans-serif;
+    font-size: 20px;
   }
 `;

@@ -3,7 +3,7 @@ import { useSpring, useTrail, config, animated, useSpringRef, useChain } from "r
 import { useState } from "react";
 
 
-const Card = ({title, link, stacks, imgSrc}) => {
+const Card = ({title, link, stacks, image}) => {
     const [hovered, setHovered] = useState(false);
     const hoverRef = useSpringRef();
     const [{y}, api] = useSpring(() => ({ y: 100, ref: hoverRef }));
@@ -40,7 +40,7 @@ const Card = ({title, link, stacks, imgSrc}) => {
                     }}
             >
                 <ProjectImg>
-                    <img src={imgSrc} alt="calculator-project" />
+                    <img src={image} alt="project" />
                 </ProjectImg>
                 <Hover style={{ transform: y.to(y => `translateY(${y}%`) }}>
                     <List>

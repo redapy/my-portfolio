@@ -3,7 +3,7 @@ import Navbar from './components/navbar/Navbar';
 import Welcome from './components/welcome/Welcome';
 import About from './components/about/About'
 import { GlobalStyle } from './GlobalStyle';
-import Card from './components/card/Card';
+import Projects from './components/projects/Projects';
 
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
       <Navbar />
       <Welcome />
       <About />
+      <Projects />
     </div>
   );
 }
