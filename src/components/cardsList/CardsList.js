@@ -7,6 +7,7 @@ const CardsList = ({projects, isvisible}) => {
         <Grid>
           {projects.map(project => (
               <Card 
+                    key={project.id}
                     isvisible={isvisible}
                     title={project.title} 
                     link={project.link} 

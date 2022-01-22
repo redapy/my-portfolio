@@ -17,7 +17,7 @@ const Projects = () => {
     const [isvisible, wrapperRef] = useOnScreen(optionsMemo);
     return ( 
         <Wrapper ref={wrapperRef} id='projects'>
-            <Title title='MY PROJECTS'/>
+            <Title title='MY PROJECTS' isvisible={isvisible}/>
             {isvisible && <CardsList projects={data} isvisible={isvisible}/>}
         </Wrapper>
      );
