@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.nav`
     width: 100%;
-    height: 80px;
+    height: 60px;
     position: sticky;
     top:0;
     z-index: 10;

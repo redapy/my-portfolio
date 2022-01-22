@@ -3,6 +3,7 @@ import data from '../../data'
 import { useMemo } from "react";
 import useOnScreen from '../../hooks/useOnScreen';
 import CardsList from "../cardsList/CardsList";
+import Title from "../title/Title";
 
 const Projects = () => {
     // Set intersection observer for the wrapper
@@ -16,6 +17,7 @@ const Projects = () => {
     const [isvisible, wrapperRef] = useOnScreen(optionsMemo);
     return ( 
         <Wrapper ref={wrapperRef} id='projects'>
+            <Title title='MY PROJECTS'/>
             {isvisible && <CardsList projects={data} isvisible={isvisible}/>}
         </Wrapper>
      );
