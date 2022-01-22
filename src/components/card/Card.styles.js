@@ -6,7 +6,7 @@ export const Wrapper = styled(animated.div)`
     margin-bottom: 10PX
 `;
 
-export const Project = styled.div`
+export const Project = styled(animated.div)`
   position: relative;
   margin: 0 auto;
   width: 350px;
