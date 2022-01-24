@@ -54,7 +54,7 @@ export const List = styled.ul`
     li {
         color: var(--seaFoam);
         border: 1px solid var(--seaFoam);
-        padding: 2px;
+        padding: 6px;
         margin: 2px 4px;
     }
 `

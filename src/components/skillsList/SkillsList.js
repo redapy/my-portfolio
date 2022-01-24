@@ -17,7 +17,7 @@ const SkillsList = ({isvisible}) => {
         })
     return ( 
         <Wrapper>
-        <h2>Technical Skills</h2>
+        <h3>Technical Skills</h3>
         <List>
             {skillsTrail.map(({x, ...props}, i) => (
                 <animated.li 
