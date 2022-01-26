@@ -4,6 +4,7 @@ import Welcome from './components/welcome/Welcome';
 import About from './components/about/About'
 import { GlobalStyle } from './GlobalStyle';
 import Projects from './components/projects/Projects';
+import ContactForm from './components/contact/ContactForm';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Welcome />
       <About />
       <Projects />
+      <ContactForm />
     </div>
   );
 }
