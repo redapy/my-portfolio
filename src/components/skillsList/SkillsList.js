@@ -3,7 +3,7 @@ import { Wrapper, List } from "./SkillsList.styles";
 
 const SkillsList = ({isvisible}) => {
         // Animating the skills list
-        const skills = ['HTML', 'CSS', 'JavaScript', 'ReactJS', 'git', 'GitHub'];
+        const skills = ['HTML', 'CSS', 'JavaScript', 'ReactJS', 'firebase', 'git', 'GitHub'];
         const skillsTrail = useTrail(skills.length, {
             from: {
                 opacity:0,

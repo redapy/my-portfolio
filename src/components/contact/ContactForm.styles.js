@@ -9,8 +9,8 @@ export const Wrapper = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    h4 {
-        margin: 0 auto;
+    h2 {
+        margin: 90px auto;
         font-family: 'Nunito', sans-serif;
         font-size: 52px;
         font-weight: 900;
@@ -41,11 +41,12 @@ export const Triangle = styled.div`
 `;
 
 export const Form = styled.form`
-    max-width: 60%;
+    width: 40%;
+    max-width: 50%;
     display: flex;
     flex-direction: column;
     input, textarea {
-        width: 700px;
+        width: 100%;
         padding: 20px;
         margin-bottom: 12px;
         border: 2px solid var(--seaFoam);
