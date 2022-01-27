@@ -31,6 +31,7 @@ export const GlobalStyle = createGlobalStyle`
 
     html, body, #root {
         min-height: 100%;
+        scroll-behavior: smooth;
     }
     
     body {

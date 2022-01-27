@@ -18,7 +18,7 @@ const Button = ({text, arrow, degre}) => {
             onMouseEnter={() => api.start({background: '#ff9a8d', color:'#4a536b', rotate:'90deg'})}
             onMouseLeave={() => api.start({background: '#aed6dc', color:'#000000', rotate:'0deg'})}
         >
-            <Text>{text}</Text>
+            <Text style={{color}} href='#projects'>{text}</Text>
             {arrow && <Arrow style={{rotate}}
             ><BsArrowRight /></Arrow>}
         </Wrapper>

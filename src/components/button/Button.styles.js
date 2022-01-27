@@ -16,9 +16,11 @@ export const Wrapper = styled(animated.button)`
 
 `;
 
-export const Text = styled(animated.span)`
+export const Text = styled(animated.a)`
     font-size: 1rem;
     font-family: 'Source Code Pro', monospace;
+    text-decoration:none;
+    color: black;
 `;
 
 export const Arrow = styled(animated.span)`
