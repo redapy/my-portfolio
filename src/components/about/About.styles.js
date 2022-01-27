@@ -47,11 +47,15 @@ export const Info = styled(animated.div)`
 export const PicWrapper = styled(animated.div)`
     width: 500px;
     min-height: 500px;
+    
     img {
         width: 100%;
         max-width: 100%;
-        border: 10px solid var(--navy);
+        border: 4px solid var(--salamon);
         border-radius: 5%;
+        border-top-color: var(--seaFoam);
+        border-left-color: var(--seaFoam);
         object-fit: contain;
+        box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
     }
 `;

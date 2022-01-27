@@ -9,14 +9,14 @@ const data = [
     {
         title: 'Project Manager',
         link: "https://lelouch-manager.web.app/",
-        stacks: ['ReactJS', 'Styled-component', 'CSS'],
+        stacks: ['ReactJS', 'React-router', 'redux', 'tailwindcss', 'firebase'],
         image: manager,
         id: 1
     },    
     {
         title: 'teaching portfolio',
         link: "https://teching-portfolio.netlify.app/",
-        stacks: ['ReactJS', 'Styled-component', 'CSS'],
+        stacks: ['ReactJS','React-router', 'framer motion', 'Styled-component', 'CSS'],
         image: teaching,
         id:2
     },    

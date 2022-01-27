@@ -37,8 +37,8 @@ export const Triangle = styled.div`
     svg {
         position: relative;
         display: block;
-        width: calc(162% + 1.3px);
-        height: 80px;
+        width: calc(100% + 1.3px);
+        height: 100px;
     }
     .shape-fill {
         fill: white;
