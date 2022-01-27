@@ -18,6 +18,10 @@ export const Wrapper = styled.section`
         margin-bottom: 20px;
         span {
             color: var(--salamon);
+            background-image: linear-gradient(90deg, var(--seaFoam), var(--salamon));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
         }
     }
 `;
@@ -56,4 +60,5 @@ export const Form = styled.form`
             border: 2px solid var(--salamon)
         }
     }
+    
 `;
