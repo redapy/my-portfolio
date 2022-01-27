@@ -1,8 +1,9 @@
 import { useMemo, useRef} from "react";
-import { Form, Triangle, Wrapper } from "./ContactForm.styles";
+import { Form, Send, Triangle, Wrapper } from "./ContactForm.styles";
 import emailjs from '@emailjs/browser';
 import useOnScreen from "../../hooks/useOnScreen";
 import { config, useTrail, animated, useSpring } from "react-spring";
+import {IoIosSend} from 'react-icons/io'
 
 const ContactForm = () => {
     const formRef = useRef();
@@ -50,21 +51,16 @@ const ContactForm = () => {
         },
         config: config.wobbly
     });
-
-    const fadeInFromRight = useSpring({
+    const {y, ...buttonSpring}= useSpring({
         from: {
             opacity: 0,
-            x: 300
+            y: 100,
         },
         to: {
             opacity: isvisible ? 1 : 0,
-            x: isvisible ? 0 : 300
+            y: isvisible ? 0 : 100,
         },
-        config: config.wobbly
-    });
-    
-
-      
+    });      
     
     return ( 
         <Wrapper ref={wrapperRef} id='contact'>
@@ -100,7 +96,14 @@ const ContactForm = () => {
                         />}
                     </animated.label>
                 ))}
-                <input type="submit" value='send'/>              
+                <Send style={{
+                    ...buttonSpring,
+                    transform: y.to(y => `translateY(${y}%`)
+                }}>
+                    <span>SEND</span>
+                    <IoIosSend />
+                </Send>
+                
             </Form>
         </Wrapper>
      );

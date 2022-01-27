@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { animated } from "react-spring";
 
 export const Wrapper = styled.section`
     position: relative;
@@ -59,6 +60,25 @@ export const Form = styled.form`
         :focus {
             border: 2px solid var(--salamon)
         }
-    }
-    
+    }    
 `;
+
+export const Send = styled(animated.button)`
+    width: 150px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    font-weight:600;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 30px;
+    background: var(--seaFoam);
+    color: var(--navy);
+    cursor: pointer;
+    span {
+        margin-right: 6px;
+    }
+`
