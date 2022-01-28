@@ -5,7 +5,9 @@ export const Wrapper = styled(animated.div)`
     width: 25%;
     margin: 0 auto;
     margin-top: 20px; 
+    margin-bottom: 10px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 `;

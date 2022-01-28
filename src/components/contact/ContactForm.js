@@ -133,10 +133,7 @@ const ContactForm = () => {
           <i><IoIosSend /></i>
         </Send>
       </Form>
-      <Contacts style={{
-            ...buttonSpring,
-            transform: y.to((y) => `translateY(${y}%`),
-          }}/>
+      <Contacts isvisible={isvisible}/>
     </Wrapper>
   );
 };

@@ -6,7 +6,7 @@ import {BsArrowRight} from 'react-icons/bs'
 //animation
 import {useSpring} from 'react-spring'
 
-const Button = ({text, arrow, degre}) => {
+const Button = ({text, arrow}) => {
     const [{background, color, rotate}, api] = useSpring(() => ({
         background: '#aed6dc',
         color: '#000000',
