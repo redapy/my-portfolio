@@ -11,6 +11,7 @@ const data = [
         link: "https://lelouch-manager.web.app/",
         stacks: ['ReactJS', 'React-router', 'redux', 'tailwindcss', 'firebase'],
         image: manager,
+        delay: 700,
         id: 1
     },    
     {
@@ -18,6 +19,7 @@ const data = [
         link: "https://teching-portfolio.netlify.app/",
         stacks: ['ReactJS','React-router', 'framer motion', 'Styled-component', 'CSS'],
         image: teaching,
+        delay: 800,
         id:2
     },    
     {
@@ -25,6 +27,7 @@ const data = [
         link: "https://redapy.github.io/random-quote-machine/",
         stacks: ['ReactJS', 'Styled-component', 'CSS'],
         image: quotes,
+        delay: 900,
         id:3
     },
     {
@@ -32,6 +35,7 @@ const data = [
         link: "https://redapy.github.io/calculator/",
         stacks: ['ReactJS', 'Styled-component', 'CSS'],
         image: calculator,
+        delay: 1000,
         id:4
     },
     {
@@ -39,6 +43,7 @@ const data = [
         link: 'https://redapy.github.io/5-25clock/',
         stacks: ['ReactJS', 'Styled-component', 'CSS'],
         image: clock,
+        delay: 1100,
         id:5
     },
     {
@@ -46,6 +51,7 @@ const data = [
         link: 'https://redapy.github.io/drum-machine/',
         stacks: ['ReactJS', 'Styled-component', 'CSS'],
         image: drum,
+        delay: 1200,
         id:6
     },
 ]

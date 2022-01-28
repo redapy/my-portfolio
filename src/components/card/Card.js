@@ -17,7 +17,7 @@ import {
 } from "react-spring";
 import { useState } from "react";
 
-const Card = ({ title, link, stacks, image, isvisible }) => {
+const Card = ({ title, link, stacks, image, isvisible, delay }) => {
   const [hovered, setHovered] = useState(false);
   const hoverRef = useSpringRef();
   const [{ y }, api] = useSpring(() => ({ y: 100, ref: hoverRef }));
@@ -41,9 +41,8 @@ const Card = ({ title, link, stacks, image, isvisible }) => {
   useChain([hoverRef, buttonRef], [0, 0.5]);
   const cardTransition = useTransition(isvisible, {
       from: {opacity: 0, x: -300, y: 800},
-      enter: {opacity: 1, x: 0, y: 0},
-      leave: {opacity: 0, x: -200, y: 800},
-      config: config.molasses
+      enter: {opacity: 1, x: 0, y: 0, delay: delay},
+      config: config.slow
   });
   return (
     <Wrapper>

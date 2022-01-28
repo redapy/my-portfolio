@@ -13,6 +13,7 @@ const CardsList = ({projects, isvisible}) => {
                     link={project.link} 
                     stacks={project.stacks} 
                     image={project.image}
+                    delay={project.delay}
               />
           ))}
         </Grid>
