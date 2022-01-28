@@ -80,4 +80,7 @@ export const Send = styled(animated.button)`
     span {
         margin-right: 6px;
     }
+    i {
+        font-size: 24px;
+    }
 `

@@ -76,6 +76,11 @@ const ContactForm = () => {
       y: isvisible ? 0 : 100,
     },
   });
+  const [{x, scale}, api] = useSpring(() => ({
+    x: 0,
+    scale: 1,
+    config: config.slow
+}));
 
   return (
     <Wrapper ref={wrapperRef} id="contact">
@@ -124,13 +129,17 @@ const ContactForm = () => {
           </animated.label>
         ))}
         <Send
+          onMouseEnter = {() => api.start({x: 10, scale: 1.2})}
+          onMouseLeave={() => api.start({x: 0, scale: 1})}
           style={{
             ...buttonSpring,
             transform: y.to((y) => `translateY(${y}%`),
           }}
         >
           <span>SEND</span>
-          <i><IoIosSend /></i>
+          <animated.i style={{x, scale}}>
+            <IoIosSend />
+          </animated.i>
         </Send>
       </Form>
       <Contacts isvisible={isvisible}/>

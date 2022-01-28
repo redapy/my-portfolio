@@ -14,6 +14,7 @@ export const Wrapper = styled(animated.div)`
 
 export const Social = styled(animated.a)`
     font-size: 32px;
+    font-family: 'Nunito', sans-serif;
     color: var(--seaFoam);
     display: flex;
     justify-content: center;
@@ -22,6 +23,7 @@ export const Social = styled(animated.a)`
     text-decoration: none;
     span {
         font-size: 18px;
+        font-family: 'Nunito', sans-serif;
         background-image: linear-gradient(90deg, var(--seaFoam), var(--salamon));
         background-clip: text;
         -webkit-background-clip: text;
