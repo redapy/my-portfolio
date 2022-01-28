@@ -38,7 +38,7 @@ export const Hover = styled(animated.div)`
   width: inherit;
   height: inherit;
   border-radius: 40px;
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgb(0, 0, 0, 0.7);
   z-index: 1;
   transform: translateY(50%);
   cursor: default;
@@ -86,7 +86,7 @@ export const Title = styled(animated.div)`
     }
   }
   h4 {
-    color: var(--salamon);
+    color: var(--seaFoam);
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
   }

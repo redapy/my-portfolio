@@ -40,9 +40,9 @@ const Card = ({ title, link, stacks, image, isvisible, delay }) => {
   });
   useChain([hoverRef, buttonRef], [0, 0.5]);
   const cardTransition = useTransition(isvisible, {
-      from: {opacity: 0, x: -300, y: 800},
-      enter: {opacity: 1, x: 0, y: 0, delay: delay},
-      config: config.slow
+      from: {opacity: 0, x: -300, y: 800, scale: 0},
+      enter: {opacity: 1, x: 0, y: 0, scale:1, delay: delay},
+      config: config.molasses
   });
   return (
     <Wrapper>
@@ -86,7 +86,7 @@ const Card = ({ title, link, stacks, image, isvisible, delay }) => {
               >
                 <button>
                   <a href={link} target="_blank" rel="noreferrer">
-                    Go live!
+                    GO LIVE!
                   </a>
                 </button>
                 <h4>{title.toUpperCase()}</h4>
