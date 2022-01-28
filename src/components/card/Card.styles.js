@@ -83,7 +83,6 @@ export const Title = styled(animated.div)`
     transition: all ease-in 0.2s;
     :hover {
       transform: scale(1.2);
-      border-color:var(--salamon);
     }
   }
   h4 {
