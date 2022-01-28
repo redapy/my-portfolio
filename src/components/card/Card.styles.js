@@ -80,6 +80,11 @@ export const Title = styled(animated.div)`
     background: inherit;
     color: var(--seaFoam);
     cursor: pointer;
+    transition: all ease-in 0.2s;
+    :hover {
+      transform: scale(1.2);
+      border-color:var(--salamon);
+    }
   }
   h4 {
     color: var(--salamon);
