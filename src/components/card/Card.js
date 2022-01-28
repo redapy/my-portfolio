@@ -59,7 +59,7 @@ const Card = ({title, link, stacks, image}) => {
                         transform: y.to(y => `translateY(${y}%`)                        
                         }}>
                     <button>
-                        <a href={link}>Go live!</a>
+                        <a href={link} target='_blank' rel="noreferrer">Go live!</a>
                     </button>
                     <h4>{title.toUpperCase()}</h4>
                     </Title>

@@ -18,7 +18,6 @@ export const Wrapper = styled.section`
         color: var(--seaFoam);
         margin-bottom: 20px;
         span {
-            color: var(--salamon);
             background-image: linear-gradient(90deg, var(--seaFoam), var(--salamon));
             background-clip: text;
             -webkit-background-clip: text;

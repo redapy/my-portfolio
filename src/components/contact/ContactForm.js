@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import useOnScreen from "../../hooks/useOnScreen";
 import { config, useTrail, animated, useSpring } from "react-spring";
 import { IoIosSend } from "react-icons/io";
+import Contacts from "../contacts/Contacts";
 
 const ContactForm = () => {
   const formRef = useRef();
@@ -129,9 +130,13 @@ const ContactForm = () => {
           }}
         >
           <span>SEND</span>
-          <IoIosSend />
+          <i><IoIosSend /></i>
         </Send>
       </Form>
+      <Contacts style={{
+            ...buttonSpring,
+            transform: y.to((y) => `translateY(${y}%`),
+          }}/>
     </Wrapper>
   );
 };
