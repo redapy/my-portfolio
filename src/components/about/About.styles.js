@@ -35,7 +35,10 @@ export const Infos = styled.div`
     }
 
     p {
-        font-size: 16px;
+        font-size: 19px;
+        font-family: 'Nunito', sans-serif;
+        margin: 10px 0;
+        line-height: 1.5;
     }
 
 `;

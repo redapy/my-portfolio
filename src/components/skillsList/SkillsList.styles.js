@@ -10,11 +10,15 @@ export const Wrapper = styled.div`
 export const List = styled.ul`
     display: flex;
     width: 100%;
-    flex-direction: column;
-    list-style: none;
-    justify-content: center;
-    align-items: left;
+    list-style: circle;
+
     li {
         margin:2px;
+        font-size: 19px;
+        font-family: 'Nunito', sans-serif;
+        margin-left: 40px;
+        :first-child {
+            margin-left: 20px;
+        }
     }
 `
