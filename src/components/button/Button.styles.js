@@ -1,10 +1,18 @@
 import styled from "styled-components";
 import { animated } from "@react-spring/web";
 
-export const Wrapper = styled(animated.button)`
-    min-width: 20%;
-    margin: 0 auto;
+
+export const Warrepr = styled.div`
     margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const Content = styled(animated.button)`
+    min-width: 20%;
+    margin: 0px auto;
     display: flex;
     justify-content: center;
     align-items: center;

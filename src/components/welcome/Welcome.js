@@ -1,4 +1,3 @@
-import React from 'react';
 import { Content, Waves, Wrapper, Title} from './Welcome.styles';
 import waves from '../../svg/wavesOpacity.svg'
 import {useSpring, animated, useTrail, config} from 'react-spring'
