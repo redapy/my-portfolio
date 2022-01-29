@@ -4,7 +4,7 @@ import profile from "../../img/profile.jpg";
 import { Content, Info, Infos, PicWrapper, Wrapper } from "./About.styles";
 import Title from "../title/Title";
 import SkillsList from "../skillsList/SkillsList";
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated, config } from "react-spring";
 
 const About = () => {
   // Set intersection observer for the wrapper
@@ -19,14 +19,16 @@ const About = () => {
   const [isvisible, wrapperRef] = useOnScreen(optionsMemo);
 
   // Animation
-  const fadeIn = useSpring({
+  const fadeInFromRight = useSpring({
     from: {
       opacity: 0,
+      x:100,
     },
     to: {
       opacity: isvisible ? 1 : 0,
+      x: isvisible ? 0 : 100,
     },
-    config: { duration: 1000 },
+    config: config.slow,
   });
 
   const fadeInFromLeft = useSpring({
@@ -38,7 +40,7 @@ const About = () => {
       opacity: isvisible ? 1 : 0,
       x: isvisible ? 0 : -100,
     },
-    config: { duration: 500 },
+    config: config.slow,
   });
 
   return (
@@ -46,31 +48,30 @@ const About = () => {
       <Title title="ABOUT ME" isvisible={isvisible} />
       <Content>
         {isvisible && (
-          <Infos>
-            <Info style={fadeIn}>
-              <animated.h3 style={fadeInFromLeft}>Who am I ?</animated.h3>
+          <Infos style={fadeInFromLeft}>
+            <Info >
+              <animated.h3 >Who am I ?</animated.h3>
               <p>
-                hi, I'm a self-taught developer based in Morocco, transitioning
-                from a Marine mechanic background (yes, I used to work on ships)
-                to tech.
+                Hi, I'm a front-end developer based in Morocco, transitioning
+                from a Marine Mechanic background (yes, I used to work on ships)
+                into tech.
               </p>
-              <p>I've been introduced to coding in one of my classes
-                back in college, in which we've studied basic algorithms and
-                data structures and some c++. After graduation and during the
-                pandemic, I've decided to dive into the programming world by
-                taking a python course, and man it's amazing !!</p>
+              <p>I've been introduced to programming in one of my classes
+                back in college. We've studied basic algorithms and
+                data structures, and some C++. After graduation and during the
+                pandemic, I've decided to self-teach dive into the programming world by
+                taking a Python course, and man it's amazing !!</p>
               <p>
-                Since then, I've
-                been developing my skills learning web development, and building
-                amazing things that I'm proud of. When I'm not coding, I'm
-                traveling, reading manga, watching anime, or playing video games.
+                Since then, I've been developing my skills in web development, and built
+                amazing projects that I'm proud of. When I'm not coding, I do
+                traveling, read manga, watch anime, or play video games.
               </p>
             </Info>
             <SkillsList isvisible={isvisible} />
           </Infos>
         )}
         {isvisible && (
-          <PicWrapper style={fadeIn}>
+          <PicWrapper style={fadeInFromRight}>
             <img src={profile} alt="my-profile" />
           </PicWrapper>
         )}

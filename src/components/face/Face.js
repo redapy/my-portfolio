@@ -10,10 +10,10 @@ const Face = ({index, interpolators}) => {
     from: { x: 0 },
     to: {
       x: 1,
-      eyeColour: eyeColours[index] // this stays the same as it doesn't need a custom interpolator
+      eyeColour: eyeColours[index] 
     },
     config: {
-      clamp: true // interpolation function can't go above 1
+      clamp: true
     },
     reset: true
   });

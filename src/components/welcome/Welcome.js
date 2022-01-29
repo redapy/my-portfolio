@@ -5,7 +5,7 @@ import Button from '../button/Button';
 
 
 const Welcome = () => {
-    const myConfig = { mass: 5, tension: 3000, friction: 300 };
+    const myConfig = { mass: 2, tension: 3000, friction: 300 };
     const letters = ("I'm a front-end web developer, and my main focus is React ❤").split('');
     const fadeIn = useSpring({
         from: {

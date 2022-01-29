@@ -11,7 +11,6 @@ export const List = styled.ul`
     display: flex;
     width: 100%;
     list-style: circle;
-
     li {
         margin:2px;
         font-size: 19px;

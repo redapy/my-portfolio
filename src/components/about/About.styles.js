@@ -18,17 +18,18 @@ export const Content = styled.div`
     width: 100%;
 `;
 
-export const Infos = styled.div`
+export const Infos = styled(animated.div)`
     align-self: flex-start;
     width: 40%;
     min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;    
+    margin-bottom: 20px;
 
     h3 {
         font-size: 30px;
-        font-weight: 500;
+        font-weight: 600;
         font-family: 'Raleway', sans-serif;
         margin-bottom: 8px;
         color: var(--navy)
@@ -37,7 +38,7 @@ export const Infos = styled.div`
     p {
         font-size: 19px;
         font-family: 'Nunito', sans-serif;
-        margin: 10px 0;
+        padding: 6px 0;
         line-height: 1.5;
     }
 
@@ -45,6 +46,7 @@ export const Infos = styled.div`
 
 export const Info = styled(animated.div)`
     width: 100%;
+    margin-bottom: 2rem;
 `;
 
 export const PicWrapper = styled(animated.div)`
