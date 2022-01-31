@@ -26,7 +26,7 @@ export const Content = styled.div`
     line-height: 1;
     h1 {
         font-weight: 600;
-        font-size: 3rem
+        font-size: clamp(1.5rem, 3vw + .5rem, 3rem);
     }
     p {
         margin-top: 1rem;
@@ -34,7 +34,7 @@ export const Content = styled.div`
 `;
 
 export const Title = styled(animated.span)`
-        font-size: 1.5rem;
+        font-size: clamp(1.2rem, 2vw + .5rem, 1.8rem);
         font-weight: 500;
         line-height: 1.3;
         font-style: italic;

@@ -8,6 +8,9 @@ export const Warrepr = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 720px){
+        margin-top: 2rem;
+    }
 `;
 
 export const Content = styled(animated.button)`
@@ -25,7 +28,7 @@ export const Content = styled(animated.button)`
 `;
 
 export const Text = styled(animated.a)`
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 0.5vw + .5rem, 1rem);
     font-family: 'Source Code Pro', monospace;
     text-decoration:none;
     color: black;

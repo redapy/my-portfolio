@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef} from 'react';
+import { useWindowSize } from './useWindowSize';
 
 const useOnScreen = (options) => {
 
@@ -10,15 +11,23 @@ const useOnScreen = (options) => {
         setIsvisible(entry.isIntersecting);
     }
 
+    const { width } = useWindowSize()
+
     useEffect(() => {
         const observer = new IntersectionObserver(fadeIn, options)
-        const current = wrapperRef.current
-        if (current) observer.observe(current)
-        
-        return () => {
-            if (current) observer.unobserve(current)
+        if (width <= 720) {
+            observer.disconnect()
+            setIsvisible(true)
+        } else {
+            const current = wrapperRef.current
+            if (current) observer.observe(current)
+            
+            return () => {
+                if (current) observer.unobserve(current)
+            }
         }
-    }, [options, wrapperRef])
+
+    }, [options, wrapperRef, width])
 
     return [isvisible, wrapperRef]
 }

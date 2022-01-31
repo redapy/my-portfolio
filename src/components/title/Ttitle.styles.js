@@ -8,6 +8,12 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  @media screen and (max-width: 720px){
+    margin: 20px auto;
+    h2 {
+      font-size: 18px
+    }
+  }
 `
 
 export const Header = styled(animated.h2)`
@@ -22,4 +28,7 @@ export const Border = styled(animated.div)`
    width: 20%;
    height: 5px;
    background-color: var(--navy);
+   @media screen and (max-width: 720px) {
+     height: 2px;
+   }
 `;

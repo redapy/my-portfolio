@@ -8,14 +8,22 @@ export const Wrapper = styled.section`
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    @media screen and (max-width: 720px) {
+        padding-left: 10px;
+    }
 
 `
 
 export const Content = styled.div`
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 100%;
+    @media screen and (max-width: 720px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 `;
 
 export const Infos = styled(animated.div)`
@@ -42,6 +50,17 @@ export const Infos = styled(animated.div)`
         line-height: 1.5;
     }
 
+    @media screen and (max-width: 720px) {
+        width: 100%;
+        align-self: center;
+        h3 {
+            font-size: 16px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+
 `;
 
 export const Info = styled(animated.div)`
@@ -52,6 +71,11 @@ export const Info = styled(animated.div)`
 export const PicWrapper = styled(animated.div)`
     width: 500px;
     min-height: 500px;
+
+    @media screen and (max-width: 720px) {
+        width: 250px;
+        min-height: 250px;
+    }
     
     img {
         width: 100%;
