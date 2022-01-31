@@ -47,7 +47,6 @@ const About = () => {
     <Wrapper ref={wrapperRef} id="about">
       <Title title="ABOUT ME" isvisible={isvisible} />
       <Content>
-        {isvisible && (
           <Infos style={fadeInFromLeft}>
             <Info >
               <animated.h3 >Who am I ?</animated.h3>
@@ -69,12 +68,9 @@ const About = () => {
             </Info>
             <SkillsList isvisible={isvisible} />
           </Infos>
-        )}
-        {isvisible && (
           <PicWrapper style={fadeInFromRight}>
             <img src={profile} alt="my-profile" />
           </PicWrapper>
-        )}
       </Content>
     </Wrapper>
   );
