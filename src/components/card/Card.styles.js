@@ -15,6 +15,10 @@ export const Project = styled(animated.div)`
   border-radius: 40px;
   box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
   cursor: pointer;
+  @media screen and (max-width: 720px) {
+    width: 250px;
+    height: 250px;
+  }
 `;
 
 export const ProjectImg = styled.div`

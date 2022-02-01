@@ -9,7 +9,12 @@ export const Wrapper = styled.section`
     justify-content: space-around;
     align-items: center;
     @media screen and (max-width: 720px) {
+        width: 80%;
+        margin: 0 auto;
+        min-height: auto;
         padding-left: 10px;
+        margin-top: 5px;
+        justify-content: center;
     }
 
 `
@@ -73,8 +78,7 @@ export const PicWrapper = styled(animated.div)`
     min-height: 500px;
 
     @media screen and (max-width: 720px) {
-        width: 250px;
-        min-height: 250px;
+        display: none;
     }
     
     img {

@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   align-items: center;
   text-align: center;
   @media screen and (max-width: 720px){
-    margin: 20px auto;
+    margin: 10px auto;
     h2 {
       font-size: 18px
     }

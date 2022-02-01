@@ -10,6 +10,11 @@ export const Wrapper = styled(animated.div)`
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: 720px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 `;
 
 export const Social = styled(animated.a)`
@@ -21,6 +26,9 @@ export const Social = styled(animated.a)`
     align-items: center;
     cursor: pointer;
     text-decoration: none;
+    @media screen and (max-width: 720px) {
+        margin-top: 4px;
+    }
     span {
         font-size: 18px;
         font-family: 'Nunito', sans-serif;
