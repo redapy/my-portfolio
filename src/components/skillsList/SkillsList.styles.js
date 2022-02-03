@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const Wrapper = styled.div`
-    width: 40%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
 
 export const List = styled.ul`
     display: flex;
+    justify-content: left;
     width: 100%;
     list-style: circle;
     li {

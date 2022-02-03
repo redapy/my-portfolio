@@ -59,6 +59,10 @@ export const Form = styled.form`
         :focus {
             border: 2px solid var(--salamon)
         }
+    }
+    @media screen and (max-width: 720px) {
+        width: 90%;
+        max-width: 100%
     }    
 `;
 

@@ -9,7 +9,7 @@ export const Wrapper = styled.section`
     justify-content: space-around;
     align-items: center;
     @media screen and (max-width: 720px) {
-        width: 80%;
+        width: 95%;
         margin: 0 auto;
         min-height: auto;
         padding-left: 10px;

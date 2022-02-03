@@ -26,6 +26,7 @@ const rightEyes = [
 
 const Button = ({ text, arrow }) => {
   const [index, setIndex] = useState(0);
+  const [hovered, setHovered] = useState(false)
   const [interpolators, setInterpolators] = useState({
     mouth: () => mouths[index],
     leftEye: () => leftEyes[index],
@@ -39,7 +40,7 @@ const Button = ({ text, arrow }) => {
   }));
   return (
     <Warrepr>
-      <Face index={index} interpolators={interpolators}/>
+      {hovered && <Face index={index} interpolators={interpolators}/>}
       <Content
         type="button"
         style={{ background, color }}
@@ -49,6 +50,7 @@ const Button = ({ text, arrow }) => {
             color: "#4a536b",
             rotate: "90deg",
           });
+          setHovered(true);
           setIndex((prevIndex) => {
             setInterpolators({
               mouth: interpolate(mouths[0], mouths[1], {

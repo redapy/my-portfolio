@@ -27,7 +27,7 @@ export const Social = styled(animated.a)`
     cursor: pointer;
     text-decoration: none;
     @media screen and (max-width: 720px) {
-        margin-top: 4px;
+        margin-top: 8px;
     }
     span {
         font-size: 18px;

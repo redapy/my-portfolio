@@ -33,9 +33,11 @@ export const GlobalStyle = createGlobalStyle`
         min-height: 100%;
         scroll-behavior: smooth;
     }
+
     
     body {
         width: 100%;
+        max-width: 100%;
         -webkit-font-smoothing: antialiased;
     }
 
