@@ -24,7 +24,7 @@ const Card = ({ title, link, stacks, image, isvisible, delay }) => {
   const [skillsTrail, trailApi] = useTrail(stacks.length, () => ({
     x: 50,
     opacity: 0,
-    config: config.stiff,
+    config: config.wobbly
   }));
   const buttonRef = useSpringRef();
   const buttonSpring = useSpring({
@@ -42,7 +42,7 @@ const Card = ({ title, link, stacks, image, isvisible, delay }) => {
   const cardTransition = useTransition(isvisible, {
       from: {opacity: 0, x: -300, y: 800, scale: 0},
       enter: {opacity: 1, x: 0, y: 0, scale:1, delay: delay},
-      config: config.molasses
+      config: config.slow
   });
   return (
     <Wrapper>

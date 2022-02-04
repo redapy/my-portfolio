@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import calculator from './img/projects-images/calculator.PNG'
 import clock from './img/projects-images/clock.PNG'
 import drum from './img/projects-images/drum-machine.PNG'
@@ -12,7 +13,7 @@ const data = [
         link: "https://lelouch-manager.web.app/",
         stacks: ['ReactJS', 'React-router', 'redux', 'tailwindcss', 'firebase'],
         image: manager,
-        delay: 700,
+        delay: 500,
         id: 1
     },    
     {
@@ -20,23 +21,24 @@ const data = [
         link: "https://teching-portfolio.netlify.app/",
         stacks: ['ReactJS','React-router', 'framer motion', 'Styled-component', 'CSS'],
         image: teaching,
-        delay: 800,
+        delay: 600,
         id:2
+    },    
+
+    {
+        title: 'movies app',
+        link: "https://rmovies-search.netlify.app/",
+        stacks: ['ReactJS', 'Styled-component', 'CSS', 'TMDB API'],
+        image: movie,
+        delay: 800,
+        id:3
     },    
     {
         title: 'quote machine',
         link: "https://redapy.github.io/random-quote-machine/",
         stacks: ['ReactJS', 'Styled-component', 'CSS'],
         image: quotes,
-        delay: 900,
-        id:3
-    },
-    {
-        title: 'movies app',
-        link: "https://rmovies-search.netlify.app/",
-        stacks: ['ReactJS', 'Styled-component', 'CSS', 'TMDB API'],
-        image: movie,
-        delay: 1000,
+        delay: 700,
         id:4
     },
     {
@@ -44,7 +46,7 @@ const data = [
         link: 'https://redapy.github.io/5-25clock/',
         stacks: ['ReactJS', 'Styled-component', 'CSS'],
         image: clock,
-        delay: 1100,
+        delay: 900,
         id:5
     },
     {
@@ -52,7 +54,7 @@ const data = [
         link: 'https://redapy.github.io/drum-machine/',
         stacks: ['ReactJS', 'Styled-component', 'CSS'],
         image: drum,
-        delay: 1200,
+        delay: 1000,
         id:6
     },
 ]
