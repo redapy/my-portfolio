@@ -4,6 +4,7 @@ import drum from './img/projects-images/drum-machine.PNG'
 import manager from './img/projects-images/manager.PNG'
 import teaching from './img/projects-images/teaching-portofolio.PNG'
 import quotes from './img/projects-images/quote-machine.PNG'
+import movie from './img/projects-images/movie.PNG'
 
 const data = [
     {
@@ -31,10 +32,10 @@ const data = [
         id:3
     },
     {
-        title: 'calculator',
-        link: "https://redapy.github.io/calculator/",
-        stacks: ['ReactJS', 'Styled-component', 'CSS'],
-        image: calculator,
+        title: 'movies app',
+        link: "https://rmovies-search.netlify.app/",
+        stacks: ['ReactJS', 'Styled-component', 'CSS', 'TMDB API'],
+        image: movie,
         delay: 1000,
         id:4
     },
